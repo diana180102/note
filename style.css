@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-main: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #131010f1;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    
+}
+
+main{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+}
+
+h1{
+    color: rgb(237, 239, 240);
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.container-createNote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 60px 0 60px;
+}
+
+.container-createNote textarea{
+    width: 350px;
+    height: 180px;
+    resize: none;
+    border-radius: 20px;
+    border: solid 3px #4ab31af1;
+    padding: 15px;
+    
+}
+
+
+
+.container-createNote textarea::placeholder{
+    font-size: 1.2rem;
+    padding: 8px;
+    font-family: var(--font-main);
+    color: rgb(148, 151, 151);
+    text-indent: 10px;
+
+}
+
+.container-createNote textarea:not(:placeholder-shown){
+    font-family: var(--font-main);
+    font-size: 1rem;
+
+}
+
+.btn-create{
+    width: 350px;
+    background-color: #45af14f1;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #FFF;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px rgba(172, 172, 172, 0.301);
+}
+
+.btn-create:hover{
+    background-color: #2ad37ff1;
+}
+
+/* NOTES */
+
+.container-notes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+    padding: 0 60px 0 60px;
+    gap: 20px;
+    
+}
+
+.container-notes .note{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    border: solid 2px #08794af1;
+    box-shadow: 0px 1px 8px rgba(255, 254, 254, 0.404);
+    height: auto;
+    
+    
+}
+
+.container-notes .note p{
+    align-self: flex-start;
+    height: 80px;
+    font-size: 1.3rem;
+    overflow-y: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.container-notes .note p[contenteditable="true"]{
+   
+   outline: none;
+    
+}
+
+.container-notes .note p::-webkit-scrollbar{
+    background-color: rgb(132, 219, 132);
+    width: 8px;
+    
+    border-radius: 5px;
+}
+.container-notes .note p::-webkit-scrollbar-thumb{
+    background-color: rgb(15, 15, 15);
+    border-radius: 5px;
+}
+
+
+
+.btn-delete, .btn-edit{
+    align-self: flex-end;
+    background-color: #08794af1;
+    padding: 8px;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    font-weight:bolder;
+    color: #ffffffe1;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.btn-delete:hover, .btn-edit:hover{
+   background-color: #2ec988f1;
+
+}
+
+
+
+.container-buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+ 
+
+
+/* RESPONSIVE */
+
+@media(min-width: 768px) {
+   
+
+    .container-notes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
+
+
+
+
